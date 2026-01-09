@@ -1,0 +1,28 @@
+version: "3.1"
+
+rules:
+
+- rule: Show toys when user asks
+  steps:
+  - intent: show_toys
+  - action: action_list_toys
+
+- rule: Show toys by price
+  steps:
+  - intent: show_toys_price
+  - action: action_list_toys
+
+- rule: Show toys by age
+  steps:
+  - intent: show_toys_age
+  - action: action_list_toys
+
+- rule: Show toys by type
+  steps:
+  - intent: show_toys_type
+  - action: action_list_toys
+
+- rule: Show toys by target group
+  steps:
+  - intent: show_toys_target_group
+  - action: action_list_toys

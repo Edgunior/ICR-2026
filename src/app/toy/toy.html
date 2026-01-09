@@ -1,0 +1,60 @@
+@if (toy()) {
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a routerLink="/">Home</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+            {{ toy()?.name }}
+        </li>
+    </ol>
+</nav>
+
+<div class="row justify-content-center">
+    <div class="col-12 col-md-6">
+        <div class="card shadow-sm">
+
+            <div class="card-header text-center">
+                <h5 class="mb-0">
+                    <i class="fa-solid fa-film"></i>
+                    {{ toy()?.name }}
+                </h5>
+            </div>
+
+            <div class="card-body text-center d-flex flex-column align-items-center">
+
+                <img
+                    [src]="toy()?.imageUrl"
+                    [alt]="toy()?.name"
+                    class="img-fluid mb-3"
+                    style="max-height: 300px;"
+                >
+
+                <p [innerHTML]="toy()?.description" class="mb-3"></p>
+
+                <p class="mb-2">
+                    <strong>Uzrast:</strong>
+                    {{ toy()?.ageGroup?.name }}
+                </p>
+
+                <p class="mb-2">
+                    <strong>Cena:</strong>
+                    {{ toy()?.price }} dinara
+                </p>
+
+            </div>
+
+            <div class="card-footer text-center">
+                <a
+                    class="btn btn-success"
+                    [routerLink]="`/toy/${toy()?.permalink}/reservation`"
+                >
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Dodaj u korpu
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+}

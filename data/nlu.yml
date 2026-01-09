@@ -1,0 +1,74 @@
+version: "3.1"
+
+nlu:
+  - intent: show_toys
+    examples: |
+      - Prikaži mi igračke
+      - Želim da vidim igračke
+      - Pokaži igračke
+      - Sve igračke
+      - Koje igračke imate
+
+  - intent: show_toys_price
+    examples: |
+      - Prikaži mi igračke koje koštaju manje od [1500](price)
+      - Igračke ispod [2000](price)
+      - Koje igračke su jeftinije od [500](price)
+      - Prikaži igračke do [1000](price)
+      - Želim jeftine igračke
+
+  - intent: show_toys_age
+    examples: |
+      - Igračke za uzrast [3-5](age)
+      - Prikaži mi igračke za uzrast [3-5](age)
+      - Želim igračke za [3-5](age) godina
+      - Koje igračke su za [3-5](age)
+      - Igračke za predškolce
+      - Igračke za uzrast [6-8](age)
+      - Igračke za dete od [3](age) godina
+      - Igračke za dete od [5](age) godina
+      - Igracke za dete od [6](age) godina
+      - Igracke za dete od [7](age) godina
+      - Igracke za dete od [10](age) godina
+
+  - intent: show_toys_type
+    examples: |
+      - Želim [slagalice](toy_type)
+      - Prikaži mi [puzzle](toy_type)
+      - Koje igračke su [slagalice](toy_type)
+      - Pokaži tip igračke [Slagalica](toy_type)
+      - Želim tip [Puzzle](toy_type)
+
+  - intent: show_toys_target_group
+    examples: |
+      - Igračke za [devojčice](target_group)
+      - Igračke za [devojcice](target_group)
+      - Želim igračke za [dečake](target_group)
+      - Želim igračke za [decake](target_group)
+      - Prikaži mi igračke za [decu](target_group)
+
+# Lookup tables 
+lookup: 
+  - name: toy_type
+    examples: |
+      - slagalice
+      - slagalica
+      - puzzle
+      - puzle
+      - kocke
+
+  - name: target_group
+    examples: |
+      - devojčice
+      - devojcice
+      - dečake
+      - decake
+      - decu
+      - deca
+
+regex_features:
+  - name: price
+    pattern: "[0-9]+"
+
+  - name: age
+    pattern: "[0-9]+-[0-9]+"

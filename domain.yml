@@ -1,0 +1,50 @@
+version: "3.1"
+
+intents:
+  - greet
+  - show_toys
+  - show_toys_price
+  - show_toys_age
+  - show_toys_type
+  - show_toys_target_group
+  - mood_great
+  - mood_unhappy
+  - affirm
+  - deny
+
+entities:
+  - price
+  - age
+  - toy_type
+  - target_group
+
+actions:
+  - action_list_toys
+
+responses:
+  utter_greet:
+    - text: "Zdravo! Kako mogu da ti pomognem oko igračaka?"
+
+  utter_happy:
+    - text: "Super! Drago mi je da si zadovoljan."
+
+  utter_cheer_up:
+    - text: "Nemoj biti tužan, sigurno možemo pronaći nešto zabavno!"
+
+  utter_did_that_help:
+    - text: "Da li ti je to pomoglo?"
+
+  utter_affirm:
+    - text: "Odlično!"
+
+  utter_deny:
+    - text: "U redu, razumem."
+
+  utter_goodbye:
+    - text: "Doviđenja!"
+
+  utter_no_toys_found:
+    - text: "Nema igračaka koje odgovaraju kriterijumu."
+
+  utter_show_toys:
+    - text: "Evo dostupnih igračaka:"

@@ -1,0 +1,102 @@
+<div class="row justify-content-center mt-3">
+    <div class="card col-8 mb-3">
+    <div class="card-header">
+        <h5>Korisnicki podaci</h5>
+    </div>
+    <div class="card-body">
+        <div class="row ">
+            <div class="col-12 col-md-6">
+                <table class="table table-striped">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Ime:</th>
+                            <td>{{activeUser()?.firstName}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Prezime:</th>
+                            <td>{{activeUser()?.lastName}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-12 col-md-6">
+                <table class="table table-striped">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Email:</th>
+                            <td>{{activeUser()?.email}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Telefon:</th>
+                            <td>{{activeUser()?.phone}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card col-8 mb-3">
+    <div class="card-header">
+        <h5>Porudzbine</h5>
+    </div> 
+
+
+
+@if (activeUser()!.data.length > 0) {
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Ime</th>
+                    <th scope="col">Tip</th>
+                    <th scope="col">Uzrast</th>
+                    <th scope="col">Kolicina</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Opcije</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (order of activeUser()?.data; track $index) {
+                <tr>
+                    <th scope="row">{{order.toyName}}</th>
+                    <td>{{order.type}}</td>
+                    <td>{{order.age}}</td>
+                    <td>{{order.quantity}}</td>
+                    <td>{{statusMap[order.status]}}</td>
+                    <td>
+                        @if(order.status == 'na') {
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-primary" (click)="pay(order)">Plati</button>
+                            <button type="button" class="btn btn-sm btn-danger" (click)="cancel(order)">Otkazi</button>
+                        </div>
+                        }
+                        @if(order.status == 'paid') {
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-success" (click)="like(order)">Like</button>
+                            <button type="button" class="btn btn-sm btn-danger"
+                                (click)="dislike(order)">Dislike</button>
+                        </div>
+                        }
+                        @if(order.status == 'liked' ||order.status == 'disliked') {
+                        Ocenjeno!
+                        }
+                        @if(order.status == 'canceled') {
+                        Otkazano!
+                        }
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+    } @else {
+    <div class="card-body">
+        <p class="text-center">Nemate porudzbina!</p>
+    </div>
+    }
+
+    </div>
+</div>

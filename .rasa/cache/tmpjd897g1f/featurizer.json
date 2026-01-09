@@ -1,0 +1,61 @@
+{
+  "type": "IntentMaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "affirm": 0,
+        "back": 1,
+        "deny": 2,
+        "greet": 3,
+        "mood_great": 4,
+        "mood_unhappy": 5,
+        "nlu_fallback": 6,
+        "out_of_scope": 7,
+        "restart": 8,
+        "session_start": 9,
+        "show_toys": 10,
+        "show_toys_age": 11,
+        "show_toys_price": 12,
+        "show_toys_target_group": 13,
+        "show_toys_type": 14
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "action_list_toys": 13,
+        "utter_affirm": 14,
+        "utter_cheer_up": 15,
+        "utter_deny": 16,
+        "utter_did_that_help": 17,
+        "utter_goodbye": 18,
+        "utter_greet": 19,
+        "utter_happy": 20,
+        "utter_no_toys_found": 21,
+        "utter_show_toys": 22
+      },
+      "entities": {
+        "age": 0,
+        "price": 1,
+        "target_group": 2,
+        "toy_type": 3
+      },
+      "slots": {},
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

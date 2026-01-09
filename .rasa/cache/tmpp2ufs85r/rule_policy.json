@@ -1,0 +1,34 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"show_toys_age\"}}]": "action_list_toys",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"show_toys_age\"}}, {\"prev_action\": {\"action_name\": \"action_list_toys\"}, \"user\": {\"intent\": \"show_toys_age\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"show_toys_target_group\"}}]": "action_list_toys",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"show_toys_target_group\"}}, {\"prev_action\": {\"action_name\": \"action_list_toys\"}, \"user\": {\"intent\": \"show_toys_target_group\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"show_toys_price\"}}]": "action_list_toys",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"show_toys_price\"}}, {\"prev_action\": {\"action_name\": \"action_list_toys\"}, \"user\": {\"intent\": \"show_toys_price\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"show_toys\"}}]": "action_list_toys",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"show_toys\"}}, {\"prev_action\": {\"action_name\": \"action_list_toys\"}, \"user\": {\"intent\": \"show_toys\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"show_toys_type\"}}]": "action_list_toys",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"show_toys_type\"}}, {\"prev_action\": {\"action_name\": \"action_list_toys\"}, \"user\": {\"intent\": \"show_toys_type\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"show_toys_target_group\"}}, {\"prev_action\": {\"action_name\": \"action_list_toys\"}, \"user\": {\"intent\": \"show_toys_target_group\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"show_toys_target_group\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"show_toys_age\"}}, {\"prev_action\": {\"action_name\": \"action_list_toys\"}, \"user\": {\"intent\": \"show_toys_age\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"show_toys_price\"}}, {\"prev_action\": {\"action_name\": \"action_list_toys\"}, \"user\": {\"intent\": \"show_toys_price\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"show_toys\"}}, {\"prev_action\": {\"action_name\": \"action_list_toys\"}, \"user\": {\"intent\": \"show_toys\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"show_toys_type\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"show_toys_age\"}}]",
+      "predicting default action with intent restart",
+      "predicting default action with intent back",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"show_toys_price\"}}]",
+      "predicting default action with intent session_start",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"show_toys\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"show_toys_type\"}}, {\"prev_action\": {\"action_name\": \"action_list_toys\"}, \"user\": {\"intent\": \"show_toys_type\"}}]"
+    ]
+  }
+}

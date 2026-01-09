@@ -1,0 +1,20 @@
+.card {
+    max-width: 15rem;
+}
+
+.input-group {
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.toys-container {
+  gap: 5px; /* razmak između kartica */
+}
+
+.toy-card {
+  flex: 0 1 calc((100% / 8)); /* 6 kartica po redu minus gap */
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  margin-left: 15px;
+}
